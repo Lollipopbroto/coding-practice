@@ -1,4 +1,4 @@
-# coding-practice
+# leetcode challenges
 This is where I will store the projects I create for practicing and enforcing my coding ability.
 
 Projects here will either be:
