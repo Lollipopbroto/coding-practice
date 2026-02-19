@@ -38,7 +38,7 @@ for i in range(len(text)):
         new_text += "œ"
 
     # long s (first "s" in a row and not at end of words)
-    elif text[i:i+1].lower() == "s" and text[i-1:i].lower() != "s" and text[i+1:i+2] != " ":
+    elif text[i:i+1].lower() == "s" and text[i-1:i].lower() != "s" and text[i+1:i+2] != " " and text[i+1:i+2] != ".":
         new_text += "ſ"
 
     elif ((text[i].lower() == "h" and text[i-1].lower() == "t") or (text[i-1].lower() == "e" and (text[i].lower() == "e" or text[i].lower() == "a" or text[i].lower() == "y")) or
