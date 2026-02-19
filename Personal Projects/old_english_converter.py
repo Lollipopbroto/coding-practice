@@ -37,6 +37,10 @@ for i in range(len(text)):
     elif text[i:i+2] in "ee ea ey".split() or text[i:i+3:2] == "ee" or text[i-1:i+1] == "ie":
         new_text += "œ"
 
+    # long s (first "s" in a row and not at end of words)
+    elif text[i:i+1].lower() == "s" and text[i-1:i].lower() != "s" and text[i+1:i+2] != " ":
+        new_text += "ſ"
+
     elif ((text[i].lower() == "h" and text[i-1].lower() == "t") or (text[i-1].lower() == "e" and (text[i].lower() == "e" or text[i].lower() == "a" or text[i].lower() == "y")) or
         (text[i-2].lower() == "e" and text[i].lower() == "e") or (text[i+1:i+2].lower() == "e" and text[i].lower() == "i")):
         pass
